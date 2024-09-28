@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Категории - Вишневые Аллеи Вики</title>
+    <title>Тарелка - Вишневые Аллеи Вики</title>
     <link rel="icon" href="images/icon.png" type="image/png" sizes="512x512">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .category {
-            margin-bottom: 20px;
-        }
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f0f0f0;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .category-content {
-            display: none;
-            padding: 10px;
-        }
-        .category-content.active {
-            display: block;
-        }
-        .toggle-btn {
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body class="light-theme">
-    <!-- ... (остальной код остается без изменений) ... -->
-
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <nav class="navigation">
+            <a href="https://visneviye-allei-wiki.github.io/Pages/">Все Статьи Вики</a>
+            <a href="#">Категории</a>
+            <a href="https://discord.gg/sAkkMxgh7f">Вики Сообщества</a>
+            <a href="https://visneviye-allei-wiki.github.io/sozdateli/">Создатели/Редакторы Вики</a>
+        </nav>
+        <div class="theme-switch">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Темная тема</span>
+        </div>
+    </div>
     <div class="main-content">
         <div class="container">
             <div class="header">
@@ -47,7 +35,7 @@
             <div class="divider"></div>
         
             <div class="content-wrapper">
-                <main class="categories">
+                <main class="main-info">
                     <h1>Категории участников Вишневых Аллей</h1>
                     
                     <section class="category">
